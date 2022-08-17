@@ -14,7 +14,7 @@
 - Tweak the amount of MS you want to use as timeout (time that each port is checked).
 - Press the 'Scan' button to allow the application to start working.
 - Wait until the process finishes all the tasks.
-- Each of the ports that are open will be output inside the "Open Ports" list
+- Each of the ports that are open will be output inside the "Open Ports" list.
 
 **Atribution Credits**
 
