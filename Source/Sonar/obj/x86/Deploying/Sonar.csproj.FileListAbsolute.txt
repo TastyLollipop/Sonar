@@ -21,3 +21,6 @@ D:\Files\Repositories\Sonar\Source\Sonar\obj\x86\Deploying\Sonar.csproj.Generate
 D:\Files\Repositories\Sonar\Source\Sonar\obj\x86\Deploying\Sonar.csproj.CoreCompileInputs.cache
 D:\Files\Repositories\Sonar\Source\Sonar\obj\x86\Deploying\Sonar.exe
 D:\Files\Repositories\Sonar\Source\Sonar\obj\x86\Deploying\Sonar.pdb
+D:\Files\Repositories\Sonar\Releases\SonarX86\Sonar.exe.config
+D:\Files\Repositories\Sonar\Releases\SonarX86\Sonar.exe
+D:\Files\Repositories\Sonar\Releases\SonarX86\Sonar.pdb

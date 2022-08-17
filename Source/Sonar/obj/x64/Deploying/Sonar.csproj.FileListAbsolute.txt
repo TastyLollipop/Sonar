@@ -23,3 +23,6 @@ D:\Files\Repositories\Sonar\Source\Sonar\obj\x64\Deploying\Sonar.pdb
 D:\Files\Repositories\Sonar\Releases\x86\Sonar.exe.config
 D:\Files\Repositories\Sonar\Releases\x86\Sonar.exe
 D:\Files\Repositories\Sonar\Releases\x86\Sonar.pdb
+D:\Files\Repositories\Sonar\Releases\SonarX64\Sonar.exe.config
+D:\Files\Repositories\Sonar\Releases\SonarX64\Sonar.exe
+D:\Files\Repositories\Sonar\Releases\SonarX64\Sonar.pdb

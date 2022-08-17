@@ -224,7 +224,6 @@ namespace Sonar
             this.hostTextBox.Name = "hostTextBox";
             this.hostTextBox.Size = new System.Drawing.Size(320, 20);
             this.hostTextBox.TabIndex = 1;
-            this.hostTextBox.Text = "83.61.58.126";
             // 
             // splitter6
             // 
