@@ -223,7 +223,7 @@ namespace Sonar
             this.hostTextBox.Location = new System.Drawing.Point(0, 216);
             this.hostTextBox.Name = "hostTextBox";
             this.hostTextBox.Size = new System.Drawing.Size(320, 20);
-            this.hostTextBox.TabIndex = 1;
+            this.hostTextBox.TabIndex = 2;
             // 
             // splitter6
             // 
@@ -306,7 +306,7 @@ namespace Sonar
             this.timeoutComboBox.Location = new System.Drawing.Point(0, 165);
             this.timeoutComboBox.Name = "timeoutComboBox";
             this.timeoutComboBox.Size = new System.Drawing.Size(320, 21);
-            this.timeoutComboBox.TabIndex = 23;
+            this.timeoutComboBox.TabIndex = 1;
             // 
             // splitter9
             // 
