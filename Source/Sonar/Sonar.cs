@@ -16,8 +16,8 @@ namespace Sonar
         public static Button _scanButton;
         public static Label _statusLabel;
         public static Label _openPortsLabel;
-        public static ProgressBar _progressBar;
         public static Label _timerLabel;
+        public static ProgressBar _progressBar;
         public static TextBox _openPortsTextbox;
         public static TextBox _hostTextBox;
         public static TextBox _minPortBox;
