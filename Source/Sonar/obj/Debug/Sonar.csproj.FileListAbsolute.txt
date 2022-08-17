@@ -1,0 +1,10 @@
+D:\Files\Solutions\Sonar\Sonar\obj\Debug\Sonar.csproj.AssemblyReference.cache
+D:\Files\Solutions\Sonar\Sonar\obj\Debug\Sonar.Sonar.resources
+D:\Files\Solutions\Sonar\Sonar\obj\Debug\Sonar.Properties.Resources.resources
+D:\Files\Solutions\Sonar\Sonar\obj\Debug\Sonar.csproj.GenerateResource.cache
+D:\Files\Solutions\Sonar\Sonar\obj\Debug\Sonar.csproj.CoreCompileInputs.cache
+D:\Files\Solutions\Sonar\Sonar\bin\Debug\Sonar.exe.config
+D:\Files\Solutions\Sonar\Sonar\bin\Debug\Sonar.exe
+D:\Files\Solutions\Sonar\Sonar\bin\Debug\Sonar.pdb
+D:\Files\Solutions\Sonar\Sonar\obj\Debug\Sonar.exe
+D:\Files\Solutions\Sonar\Sonar\obj\Debug\Sonar.pdb
