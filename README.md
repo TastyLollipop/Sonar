@@ -11,6 +11,7 @@
 
 **How does it work?**
 - Input the IP you want to scan (Public IP), then both the starting and ending port.
+- Tweak the amount of MS you want to use as timeout (time that each port is checked).
 - Press the 'Scan' button to allow the application to start working.
 - Wait until the process finishes all the tasks.
 - Each of the ports that are open will be output inside the "Open Ports" list
