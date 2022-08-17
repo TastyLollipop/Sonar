@@ -1,3 +1,4 @@
 Releases/
-Source/Sonar/bin
-Source/Sonar/obj
+Source/Sonar/bin/
+Source/Sonar/obj/
+.vs/
