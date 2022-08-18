@@ -9,9 +9,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-Releases/
-Source/Sonar/bin/
-Source/Sonar/obj/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -34,6 +31,9 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+Releases/
+Source/Sonar/bin/
+Source/Sonar/obj/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
