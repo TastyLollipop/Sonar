@@ -58,7 +58,6 @@ namespace Sonar
             string ip = Sonar.sonar.ip;
             int startingPort = Sonar.sonar.startingPort;
             int endingPort = Sonar.sonar.endingPort;
-
             int totalPorts = endingPort - startingPort + 1;
 
             float tempPortValue = 0;
