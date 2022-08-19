@@ -10,7 +10,7 @@
 - Sonar's speed is heavily reliant on your internet connection.
 
 **How does it work?**
-- Input the IP you want to scan (Public IP), then both the starting and ending port.
+- Input the IP you want to scan (Public IP), then both the starting and ending ports.
 - Tweak the amount of MS you want to use as timeout (time that each port is checked).
 - Press the 'Scan' button to allow the application to start working.
 - Wait until the process finishes all the tasks.
