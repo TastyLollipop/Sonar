@@ -76,7 +76,7 @@ namespace Sonar
 
             outOfBoundsPorts = (int)Math.Round(tempPortValue, 0);
 
-            //First wave of threads to check ports
+            //Invoke threads to check the ports
             for (int i = 0; i < Sonar.sonar.maxThreads; i++)
             {
                 Thread.Sleep(100);
