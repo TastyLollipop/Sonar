@@ -17,10 +17,10 @@ namespace Sonar
             switch (threadID)
             {
                 case 0:
-                    Thread NetworkingThread = new Thread(new ThreadStart(Sonar.utils.GenerateNetworkInstances));
-                    NetworkingThread.IsBackground = true;
-                    NetworkingThread.Name = "Utils Thread";
-                    NetworkingThread.Start();
+                    Thread utilsThread = new Thread(new ThreadStart(Sonar.utils.GenerateNetworkInstances));
+                    utilsThread.IsBackground = true;
+                    utilsThread.Name = "Utils Thread";
+                    utilsThread.Start();
                     break;
 
                 case 1:

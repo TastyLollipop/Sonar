@@ -20,8 +20,8 @@ namespace Sonar
         public static ProgressBar _progressBar;
         public static TextBox _openPortsTextbox;
         public static TextBox _hostTextBox;
-        public static TextBox _minPortBox;
-        public static TextBox _maxPortBox;
+        public static TextBox _startingPortBox;
+        public static TextBox _endingPortBox;
         public static ComboBox _threadComboBox;
         public static ComboBox _timeoutComboBox;
 
@@ -30,8 +30,8 @@ namespace Sonar
         public int currentProgressValue;
         public int timeoutTime;
 
-        public int minPort;
-        public int maxPort;
+        public int startingPort;
+        public int endingPort;
 
         public List<int> openPorts = new List<int>();
         public List<int> closedPorts = new List<int>();
@@ -56,8 +56,8 @@ namespace Sonar
             _openPortsTextbox = openPortsTextbox;
             _openPortsLabel = openPortsLabel;
             _hostTextBox = hostTextBox;
-            _minPortBox = startingPortBox;
-            _maxPortBox = endingPortBox;
+            _startingPortBox = startingPortBox;
+            _endingPortBox = endingPortBox;
             _threadComboBox = threadComboBox;
             _timerLabel = timerLabel;
             _timeoutComboBox = timeoutComboBox;
@@ -89,14 +89,11 @@ namespace Sonar
         //Starts the process when 'Scan' button is pressed
         private void scanButton_Click(object sender, EventArgs e)
         {
-            maxThreads = int.Parse(threadComboBox.Text);
-            timeoutTime = int.Parse(timeoutComboBox.Text);
-
-            if (!CheckVariables()) return;
+            if (!utils.CheckVariables()) return;
 
             ip = hostTextBox.Text;
-            minPort = int.Parse(startingPortBox.Text);
-            maxPort = int.Parse(endingPortBox.Text);
+            startingPort = int.Parse(startingPortBox.Text);
+            endingPort = int.Parse(endingPortBox.Text);
 
             uiLogic.InvokeFunctionOn(UILogic.InvokeMode.modifyOpenPortBox, -1);
             uiLogic.InvokeFunctionOn(UILogic.InvokeMode.toggleButtons, null);
@@ -105,39 +102,5 @@ namespace Sonar
 
         //Opens the "about" URL
         private void aboutButton_Click(object sender, EventArgs e) { System.Diagnostics.Process.Start(aboutURL); }
-
-        //Checks if every variable input is correct
-        private bool CheckVariables()
-        {
-            try
-            {
-                int minPortValue = int.Parse(startingPortBox.Text);
-                int maxPortValue = int.Parse(endingPortBox.Text);
-                int totalPorts = maxPortValue - minPortValue + 1;
-                bool isWrong = false;
-
-                if (string.IsNullOrWhiteSpace(hostTextBox.Text)) isWrong = true;
-                if (string.IsNullOrWhiteSpace(endingPortBox.Text)) isWrong = true;
-                if (string.IsNullOrWhiteSpace(startingPortBox.Text)) isWrong = true;
-                if (minPortValue > maxPortValue) isWrong = true;
-                if (minPortValue < 0 || maxPortValue < 0) isWrong = true;
-                if (totalPorts < maxThreads) isWrong = true;
-                if (minPortValue < 1) isWrong = true;
-                if (maxPortValue > 65535) isWrong = true;
-
-                if (isWrong)
-                {
-                    uiLogic.InvokeFunctionOn(UILogic.InvokeMode.showMessageBox, 0);
-                    return false;
-                }
-                else return true;
-            }
-
-            catch
-            {
-                uiLogic.InvokeFunctionOn(UILogic.InvokeMode.showMessageBox, 0);
-                return false;
-            }
-        }
     }
 }

@@ -106,8 +106,8 @@ namespace Sonar
         {
             Sonar._scanButton.Enabled = !Sonar._scanButton.Enabled;
             Sonar._hostTextBox.Enabled = !Sonar._hostTextBox.Enabled;
-            Sonar._minPortBox.Enabled = !Sonar._minPortBox.Enabled;
-            Sonar._maxPortBox.Enabled = !Sonar._maxPortBox.Enabled;
+            Sonar._endingPortBox.Enabled = !Sonar._endingPortBox.Enabled;
+            Sonar._startingPortBox.Enabled = !Sonar._startingPortBox.Enabled;
             Sonar._threadComboBox.Enabled = !Sonar._threadComboBox.Enabled;
             Sonar._progressBar.Enabled = !Sonar._progressBar.Enabled;
             Sonar._timeoutComboBox.Enabled = !Sonar._timeoutComboBox.Enabled;

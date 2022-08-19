@@ -15,14 +15,51 @@ namespace Sonar
         private bool threadAddingProgress = false;
         private bool threadAddingOpenPort = false;
 
+        //Checks if every variable input is correct
+        public bool CheckVariables()
+        {
+            try
+            {
+                Sonar.sonar.maxThreads = int.Parse(Sonar._threadComboBox.Text);
+                Sonar.sonar.timeoutTime = int.Parse(Sonar._timeoutComboBox.Text);
+
+                int startingPortValue = int.Parse(Sonar._startingPortBox.Text);
+                int endingPortValue = int.Parse(Sonar._endingPortBox.Text);
+                int totalPorts = endingPortValue - startingPortValue + 1;
+                bool isWrong = false;
+
+                if (string.IsNullOrWhiteSpace(Sonar._hostTextBox.Text)) isWrong = true;
+                if (string.IsNullOrWhiteSpace(Sonar._endingPortBox.Text)) isWrong = true;
+                if (string.IsNullOrWhiteSpace(Sonar._startingPortBox.Text)) isWrong = true;
+                if (startingPortValue > endingPortValue) isWrong = true;
+                if (startingPortValue < 0 || endingPortValue < 0) isWrong = true;
+                if (totalPorts < Sonar.sonar.maxThreads) isWrong = true;
+                if (startingPortValue < 1) isWrong = true;
+                if (endingPortValue > 65535) isWrong = true;
+
+                if (isWrong)
+                {
+                    Sonar.uiLogic.InvokeFunctionOn(UILogic.InvokeMode.showMessageBox, 0);
+                    return false;
+                }
+                else return true;
+            }
+
+            catch
+            {
+                Sonar.uiLogic.InvokeFunctionOn(UILogic.InvokeMode.showMessageBox, 0);
+                return false;
+            }
+        }
+
         //Generates all instances needed to check the ports
         public void GenerateNetworkInstances()
         {
             string ip = Sonar.sonar.ip;
-            int minPort = Sonar.sonar.minPort;
-            int maxPort = Sonar.sonar.maxPort;
+            int startingPort = Sonar.sonar.startingPort;
+            int endingPort = Sonar.sonar.endingPort;
 
-            int totalPorts = maxPort - minPort + 1;
+            int totalPorts = endingPort - startingPort + 1;
 
             float tempPortValue = 0;
             int outOfBoundsPorts = 0;
@@ -46,7 +83,7 @@ namespace Sonar
                 Thread.Sleep(100);
 
                 int portSegment = (totalPorts / Sonar.sonar.maxThreads) * i;
-                int startingPort = minPort + portSegment + extraStartingPort;
+                int startingPosition = startingPort + portSegment + extraStartingPort;
 
                 float numberOfPorts = (float) totalPorts / (float) Sonar.sonar.maxThreads;
 
@@ -58,7 +95,7 @@ namespace Sonar
                     outOfBoundsPorts--;
                 }
 
-                int[] portsToCheck = Enumerable.Range(startingPort, (int)numberOfPorts).ToArray();
+                int[] portsToCheck = Enumerable.Range(startingPosition, (int)numberOfPorts).ToArray();
 
                 tempPortValue += numberOfPorts % 1;
 
