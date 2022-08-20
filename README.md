@@ -6,12 +6,13 @@
 - It will test all of the desired ports and output whether they are open or closed.
 
 **Things to know before using?**
-- Sonar won't work without being connected to the internet.
+- Sonar won't work correctly without being connected to the internet.
 - Sonar's speed is heavily reliant on your internet connection.
 
 **How does it work?**
-- Input the IP you want to scan (Public IP), then both the starting and ending ports.
-- Tweak the amount of MS you want to use as timeout (time that each port is checked).
+- Input the IP you want to scan, then both the starting and ending ports.
+- Tweak the amount of threads you want to use during the scan.
+- Tweak the amount of MS you want to use as timeout per port.
 - Press the 'Scan' button to allow the application to start working.
 - Wait until the process finishes all the tasks.
 - Each of the ports that are open will be output inside the "Open Ports" list.
