@@ -24,7 +24,7 @@ namespace Sonar
                 int totalPorts = endingPortValue - startingPortValue + 1;
                 bool isWrong = false;
 
-                if (string.IsNullOrWhiteSpace(Sonar._hostTextBox.Text)) isWrong = true;
+                if (string.IsNullOrWhiteSpace(Sonar._hostTextBox.Text) || Sonar._hostTextBox.Text.Contains(' ')) isWrong = true;
                 if (string.IsNullOrWhiteSpace(Sonar._endingPortBox.Text)) isWrong = true;
                 if (string.IsNullOrWhiteSpace(Sonar._startingPortBox.Text)) isWrong = true;
                 if (startingPortValue > endingPortValue) isWrong = true;
