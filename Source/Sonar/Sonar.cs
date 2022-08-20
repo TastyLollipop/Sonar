@@ -36,7 +36,7 @@ namespace Sonar
         public List<int> openPorts = new List<int>();
         public List<int> closedPorts = new List<int>();
 
-        private string versionName = "v1.0.0";
+        private string versionName = "v1.0.1";
         private string aboutURL = "https://github.com/TastyLollipop/Sonar";
 
         public Sonar()
