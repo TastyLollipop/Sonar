@@ -28,10 +28,8 @@ namespace Sonar
                 if (string.IsNullOrWhiteSpace(Sonar._endingPortBox.Text)) isWrong = true;
                 if (string.IsNullOrWhiteSpace(Sonar._startingPortBox.Text)) isWrong = true;
                 if (startingPortValue > endingPortValue) isWrong = true;
-                if (startingPortValue < 0 || endingPortValue < 0) isWrong = true;
+                if (startingPortValue < 1 || endingPortValue > 65535) isWrong = true;
                 if (totalPorts < Sonar.sonar.maxThreads) isWrong = true;
-                if (startingPortValue < 1) isWrong = true;
-                if (endingPortValue > 65535) isWrong = true;
 
                 if (isWrong)
                 {
