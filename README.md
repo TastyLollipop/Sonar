@@ -8,6 +8,7 @@
 **Things to know before using?**
 - Sonar won't work correctly without being connected to the internet.
 - Sonar's speed is heavily reliant on your internet connection.
+- Requires .NET Framework 4.7 or superior to work!
 
 **How does it work?**
 - Input the IP you want to scan, then both the starting and ending ports.
